@@ -3,7 +3,7 @@
 This is a First-Person ray cast game using Lode's tutorial rewritten to C# (https://lodev.org/cgtutor/raycasting.html)
 
 ## RoadMap
-* This game is currently only in Winforms but it will be changed to monogame to use DirectX
+* This game is currently only in Winforms but it will be changed to monogame framework for DirectX
 because this is running on winforms and resizing the form to a bigger resolution will drastically lower the fps
 
 ## How to use
