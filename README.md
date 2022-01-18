@@ -9,5 +9,4 @@ because this is running on winforms and resizing the form to a bigger resolution
 ## How to use
 * Once in game press 'm' to lock cursor and look around with mouse (move with W A S D keys)
 * Scroll up or down to change field of view
-* Currently no sprites are added, if you want to add aprite, you can add sprite values to sprite field and specify which texture index to use.
-Any texture will work but if the image is bigger than 256x256 the extra length will be cut off.
+* If you want to use your own sprite/textures the textures width and height are set to 256 which can be changed, any bigger and the testures will not be fully drawn

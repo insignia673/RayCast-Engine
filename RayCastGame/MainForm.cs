@@ -44,12 +44,12 @@ namespace RayCastGame
         int texWidth = 256;
         int texHeight = 256;
 
-        Sprite[] sprites = new Sprite[0];
-        //{
-        //    new Sprite{ CoorX = 1.2f, CoorY = 5.6f, Texture = 1 },
-        //    new Sprite{ CoorX = 5.6f, CoorY = 1.2f, Texture = 1 },
-        //    new Sprite{ CoorX = 7f, CoorY = 7f, Texture = 1 }
-        //};
+        Sprite[] sprites = new Sprite[3]
+        {
+            new Sprite{ CoorX = 1.2f, CoorY = 5.6f, Texture = 1 },
+            new Sprite{ CoorX = 5.6f, CoorY = 1.2f, Texture = 1 },
+            new Sprite{ CoorX = 7f, CoorY = 7f, Texture = 1 }
+        };
         double[] zBuffer;
         int[] spriteOrder;
         double[] spriteDistance;
@@ -108,7 +108,7 @@ namespace RayCastGame
             #endregion
 
             LoadTexture(@"Textures\wall.png", 0);
-            //LoadTexture(@"Textures\", 1);
+            LoadTexture(@"Textures\monster.png", 1);
             LoadTexture(@"Textures\floor.jpg", 2);
             LoadTexture(@"Textures\ceiling.jpg", 3);
 
@@ -432,7 +432,7 @@ namespace RayCastGame
                             int d = y * 256 - ClientRectangle.Height * 128 + spriteHeight * 128; //256 and 128 factors to avoid floats
                             int texY = (d * texHeight) / spriteHeight / 256;
                             uint color = texture[sprites[spriteOrder[i]].Texture][Math.Abs(texWidth * texY + texX)]; //get current color from the texture
-                            if (color != 0x00FFFFFF) buffer[y, stripe] = color; //paint pixel if it isn't invisible
+                            if ((color & 0x00FFFFFF) != 0) buffer[y, stripe] = color; //paint pixel if it isn't invisible
                         }
                 }
             }
