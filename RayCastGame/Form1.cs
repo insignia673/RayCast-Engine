@@ -107,10 +107,10 @@ namespace RayCastGame
             #endregion
 
             //LoadTexture(@"C:\Users\SIG\Pictures\Saved Pictures\Enemy.jpg", 0);
-            LoadTexture(@"C:\Users\SIG\Desktop\code\C++Learning\wall.png", 0);
+            LoadTexture(@"Textures\wall.png", 0);
             //LoadTexture(@"C:\Users\SIG\Desktop\code\C++Learning\mosnter.png", 1);
-            LoadTexture(@"C:\Users\SIG\Desktop\code\C++Learning\floor.jpg", 2);
-            LoadTexture(@"C:\Users\SIG\Desktop\code\C++Learning\ceiling.jpg", 3);
+            LoadTexture(@"Textures\floor.jpg", 2);
+            LoadTexture(@"Textures\ceiling.jpg", 3);
 
             zBuffer = new double[ClientRectangle.Width];
             spriteOrder = new int[3];
