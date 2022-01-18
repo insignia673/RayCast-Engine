@@ -17,7 +17,7 @@ using System.Windows.Forms;
 
 namespace RayCastGame
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         float fov = 1;
         public float FOV
@@ -59,7 +59,7 @@ namespace RayCastGame
         /// implement resolution settings (games buffer doesnt have to be the same resolution as screen res) transfer to monogame
         /// </TODO>
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             DoubleBuffered = true;
@@ -80,9 +80,9 @@ namespace RayCastGame
             {
                 if (e.Delta > 0)
                 {
-                    FOV += .1f;
+                    FOV += -0.1f;
                 }
-                else FOV += -0.1f;
+                else FOV += 0.1f;
             };
 
             for (int i = 0; i < 8; i++)
