@@ -54,11 +54,6 @@ namespace RayCastGame
         int[] spriteOrder;
         double[] spriteDistance;
 
-
-        /// <TODO>
-        /// implement resolution settings (games buffer doesnt have to be the same resolution as screen res) transfer to monogame
-        /// </TODO>
-
         public MainForm()
         {
             InitializeComponent();
