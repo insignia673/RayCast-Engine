@@ -13,8 +13,7 @@ namespace RayCastGame.Models
         public int Width { get; private set; }
         public int Height { get; private set; }
         public int[,] World { get; private set; }
-        //public List<Point> Spawns { get; private set; } = new List<Point>(); this might be better to be split to another class/model
-        public Map(int width, int height)//, List<Point> spawns)
+        public Map(int width, int height)
         {
             Width = width;
             Height = height;
