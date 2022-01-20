@@ -9,11 +9,11 @@ namespace RayCastGame.Models
 {
     public class Player : Entity
     {
-        public double DirX { get; set; } = -1;
-        public double DirY { get; set; } = 0;
-        public double PlaneX { get; set; } = 0;
-        public double PlaneY { get; set; } = .66;
-        public void Update(double gametime, int[,] map, int turn)
+        public double DirX { get; set; } = .69;
+        public double DirY { get; set; } = .7;
+        public double PlaneX { get; set; } = .47;
+        public double PlaneY { get; set; } = -.46;
+        public void Update(double gametime, int[,] map, float turn)
         {
             #region Walk
             if (Input.KEYINPUT[Keys.W])

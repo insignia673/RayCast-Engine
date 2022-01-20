@@ -20,6 +20,7 @@ namespace RayCastGame
     public partial class MainForm : Form
     {
         float fov = 1;
+        float sensitivity = .08f;
         public float FOV
         {
             get => fov;
@@ -27,6 +28,16 @@ namespace RayCastGame
             {
                 if (value > 0.2f && value < 4.5f)
                     fov = value;
+            }
+        }
+
+        public float Sensitivity
+        {
+            get => sensitivity;
+            set
+            {
+                if (value >= .01 && value <= 0.1)
+                    sensitivity = value;
             }
         }
         public GameState State { get; set; } = GameState.InGame;
@@ -154,7 +165,7 @@ namespace RayCastGame
                 case GameState.InGame:
                     if (usingCursor)
                         Cursor.Position = new Point(Left + 200, Top + 200);
-                    player.Update(gameTime, map.World, Input.Mouse.X - MousePosition.X);
+                    player.Update(gameTime, map.World, (Input.Mouse.X - MousePosition.X) * sensitivity);
                     zBuffer = new double[ClientRectangle.Width];
                     buffer = new uint[ClientRectangle.Height, ClientRectangle.Width];// y-coordinate first because it works per scanline (FIX THIS, might not be nessessary to update eachtime)
                     bmp = new Bitmap(ClientRectangle.Width, ClientRectangle.Height);
@@ -190,6 +201,7 @@ namespace RayCastGame
                 }
             }
             e.Graphics.DrawImage(bmp, 0, 0);
+            e.Graphics.DrawString($"{player.DirX}, {player.DirY}, {player.PlaneX}, {player.PlaneY}", DefaultFont, Brushes.White, 0, 0);
         }
 
         private void SetBuffer()

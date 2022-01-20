@@ -4,7 +4,8 @@ This is a First-Person ray cast game using Lode's tutorial rewritten to C# (http
 
 ## RoadMap
 * This game is currently only in Winforms but it will be changed to monogame framework for DirectX
-because this is running on winforms and resizing the form to a bigger resolution will drastically lower the fps
+because resizing the form to a bigger resolution will drastically lower the fps
+* Add features like Main menu, Settings, Map creator, ect...
 
 ## How to use
 * Once in game press 'm' to lock cursor and look around with mouse (move with W A S D keys)
