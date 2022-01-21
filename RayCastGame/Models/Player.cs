@@ -18,23 +18,23 @@ namespace RayCastGame.Models
             #region Walk
             if (Input.KEYINPUT[Keys.W])
             {
-                if (map[(int)(CoorX + DirX * gametime), (int)CoorY] != 1) CoorX += (float)(DirX * gametime);
-                if (map[(int)CoorX, (int)(CoorY + DirY * gametime)] != 1) CoorY += (float)(DirY * gametime);
+                if (map[(int)(CoorX + DirX * gametime), (int)CoorY] != 1) CoorX += (float)(DirX * gametime) * (Input.KEYINPUT[Keys.ShiftKey] ? .5f : 1);
+                if (map[(int)CoorX, (int)(CoorY + DirY * gametime)] != 1) CoorY += (float)(DirY * gametime) * (Input.KEYINPUT[Keys.ShiftKey] ? .5f : 1);
             }
             if (Input.KEYINPUT[Keys.D])
             {
-                if (map[(int)(CoorX - DirY * gametime), (int)CoorY] != 1) CoorX -= (float)(DirY * gametime);
-                if (map[(int)CoorX, (int)(CoorY + DirX * gametime)] != 1) CoorY += (float)(DirX * gametime);
+                if (map[(int)(CoorX - DirY * gametime), (int)CoorY] != 1) CoorX -= (float)(DirY * gametime) * (Input.KEYINPUT[Keys.ShiftKey] ? .5f : 1);
+                if (map[(int)CoorX, (int)(CoorY + DirX * gametime)] != 1) CoorY += (float)(DirX * gametime) * (Input.KEYINPUT[Keys.ShiftKey] ? .5f : 1);
             }
             if (Input.KEYINPUT[Keys.S])
             {
-                if (map[(int)(CoorX - DirX * gametime), (int)CoorY] != 1) CoorX -= (float)(DirX * gametime);
-                if (map[(int)CoorX, (int)(CoorY - DirY * gametime)] != 1) CoorY -= (float)(DirY * gametime);
+                if (map[(int)(CoorX - DirX * gametime), (int)CoorY] != 1) CoorX -= (float)(DirX * gametime) * (Input.KEYINPUT[Keys.ShiftKey] ? .5f : 1);
+                if (map[(int)CoorX, (int)(CoorY - DirY * gametime)] != 1) CoorY -= (float)(DirY * gametime) * (Input.KEYINPUT[Keys.ShiftKey] ? .5f : 1);
             }
             if (Input.KEYINPUT[Keys.A])
             {
-                if (map[(int)(CoorX + DirY * gametime), (int)CoorY] != 1) CoorX += (float)(DirY * gametime);
-                if (map[(int)CoorX, (int)(CoorY - DirX * gametime)] != 1) CoorY -= (float)(DirX * gametime);
+                if (map[(int)(CoorX + DirY * gametime), (int)CoorY] != 1) CoorX += (float)(DirY * gametime) * (Input.KEYINPUT[Keys.ShiftKey] ? .5f : 1);
+                if (map[(int)CoorX, (int)(CoorY - DirX * gametime)] != 1) CoorY -= (float)(DirX * gametime) * (Input.KEYINPUT[Keys.ShiftKey] ? .5f : 1);
             }
             #endregion
 

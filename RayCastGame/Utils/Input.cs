@@ -23,7 +23,7 @@ namespace RayCastGame.Utils
             { Keys.W, false },
             { Keys.Right, false },
             { Keys.Left, false },
-            { Keys.LShiftKey, false },
+            { Keys.ShiftKey, false },
             { Keys.Escape, false }
         };
     }
