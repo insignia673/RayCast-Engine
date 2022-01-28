@@ -1,4 +1,4 @@
-# Ray Cast Engine C#
+# Ray Cast Engine C# Winforms
 
 This is a First-Person ray cast game using Lode's tutorial rewritten to C# (https://lodev.org/cgtutor/raycasting.html)
 
